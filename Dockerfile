@@ -18,7 +18,7 @@ RUN apt-get update && apt-get install -y libpq-dev postgresql-client-9.6
   RUN git clone https://github.com/creationix/nvm.git $NVM_DIR &&       cd $NVM_DIR &&       git checkout `git describe --abbrev=0 --tags`
 
   # Install default version of Node.js
-  RUN source $NVM_DIR/nvm.sh &&       nvm install --lts=argon &&       nvm use --lts &&       export NODE_VERSION=$(nvm current | egrep -o '[0-9]+.[0-9]+.[0-9]+') &&       echo "export NODE_VERSION=$(nvm current | egrep -o '[0-9]+.[0-9]+.[0-9]+')" >> $HOME/.bashrc &&       nvm alias default $NODE_VERSION &&       nvm use default
+  RUN source $NVM_DIR/nvm.sh &&       nvm install --lts=boron &&       nvm use --lts &&       export NODE_VERSION=$(nvm current | egrep -o '[0-9]+.[0-9]+.[0-9]+') &&       echo "export NODE_VERSION=$(nvm current | egrep -o '[0-9]+.[0-9]+.[0-9]+')" >> $HOME/.bashrc &&       nvm alias default $NODE_VERSION &&       nvm use default
 
   # Add nvm.sh to .bashrc for startup...
   RUN echo "source ${NVM_DIR}/nvm.sh" > $HOME/.bashrc &&       source $HOME/.bashrc
