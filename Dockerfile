@@ -1,5 +1,5 @@
 # RUBY
-FROM ruby:2.0.0
+FROM ruby:2.2.3
 MAINTAINER david.bernheisel@scimedsolutions.com
 
 # POSTGRES
@@ -8,5 +8,5 @@ RUN wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-k
 RUN apt-get update && apt-get install -y libpq-dev postgresql-client-9.6
 
 # NODE
-RUN curl -sL https://deb.nodesource.com/setup_4.x | bash -
+RUN curl -sL https://deb.nodesource.com/setup_6.x | bash -
 RUN apt-get install -y nodejs
