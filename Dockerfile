@@ -1,6 +1,6 @@
 # RUBY
-FROM ruby:2.2.5
-MAINTAINER david.bernheisel@scimedsolutions.com
+FROM ruby:2.2.8
+MAINTAINER gabrielfalcaorios@gmail.com
 
 # POSTGRES
 RUN echo "deb http://apt.postgresql.org/pub/repos/apt/ trusty-pgdg main 9.1" > /etc/apt/sources.list.d/pgdg.list
